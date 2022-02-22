@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    margin: 15px 0;
+  }
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    button {
+      border: none;
+      background: #fff;
+      color: #222;
+      padding: 10px 13px;
+      border-radius: 5px;
+      transition: background .4s;
+      cursor: pointer;
+      &.current {
+        background: #083356;
+        color: #fff;
+      }
+    }
+  }
+  .code-editor {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-wrap {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .theme-selector {
+      margin: 10px 0;
+      select {
+        border: none;
+        font-weight: 700;
+        padding: 5px;
+        outline: none;
+      }
+    }
+    .react-codemirror2 {
+      width: 100%;
+      .CodeMirror {
+        border-radius: 5px;
+        height: 200px;
+      }
+    }
+  }
+  .code-executor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    align-items: center;
+    iframe {
+      width: 100%;
+      height: calc(100vh - 460px);
+      border: 1px solid rgba(34, 34, 34, 0.267);
+      border-radius: 5px;
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+      resize: vertical;
+    }
+  }
+  .btn {
+    padding: 10px 15px;
+    width: max-content;
+    align-self: flex-start;
+    margin: 15px 20px;
+    border: none;
+    background: #4EB877;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    color: #fff;
+    transition: box-shadow .3s;
+    &:hover {
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    }
+    &:active {
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    &.file {
+      background: #7549c1;
+    }
+  }
+}
